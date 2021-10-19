@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import generater from "fake-code-generater";
+import generater from "./utils/generater";
 
 const code = ref(generater());
 
@@ -11,7 +11,7 @@ const changeCode = () => {
 
 <template>
   <button @click="changeCode">change</button>
-  <div>{{ code.value }}</div>
+  <div>{{ code }}</div>
 </template>
 
 <style></style>
